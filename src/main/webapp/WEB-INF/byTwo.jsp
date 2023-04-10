@@ -9,5 +9,6 @@
 </head>
 <body>
 <h2>Incremented by two</h2>
+<h2><a href="/your_server/counter">Count</a></h2>
 </body>
 </html>

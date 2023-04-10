@@ -12,10 +12,10 @@ public class CounterController {
 	public String yourServer(HttpSession session ) {
 		
 		if(session.getAttribute("count")== null) {
-			session.setAttribute("count", 0);
+			session.setAttribute("count", 1);
 		} else {
 			Integer count = (Integer) session.getAttribute("count");
-			session.setAttribute("count", count++);
+			session.setAttribute("count", count+1);
 		}
 
 		return"home.jsp";
@@ -25,7 +25,7 @@ public class CounterController {
 	public String yourServerTwo(HttpSession session) {
 		
 		if(session.getAttribute("count")== null) {
-			session.setAttribute("count", 0);
+			session.setAttribute("count", 2);
 		} else {
 			Integer count = (Integer) session.getAttribute("count");
 			session.setAttribute("count", count+2);
@@ -33,6 +33,12 @@ public class CounterController {
 
 		return"byTwo.jsp";
 		
+	}
+	
+	@GetMapping("/your_server/clear")
+	public String clear(HttpSession session) {
+		session.invalidate();
+		return "redirect:/your_server/counter";
 	}
 	
 	@GetMapping("/your_server/counter")

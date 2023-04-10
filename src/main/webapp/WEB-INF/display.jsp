@@ -8,6 +8,9 @@
 <title>Counter Display</title>
 </head>
 <body>
-	<h3>You have visited <a>http://localhost:8080/your_server</a> ${count } times</h3>
+	<h3>You have visited <a href="/your_server">Home</a> ${count } times</h3>
+	<a href="/your_server/two">Increment by two</a>
+	<br>
+	<a href="/your_server/clear">Clear count!</a>
 </body>
 </html>

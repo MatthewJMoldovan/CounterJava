@@ -9,5 +9,8 @@
 </head>
 <body>
 <h1>Welcome User!</h1>
+<h3>Check <a href="/your_server/counter">count</a></h3>
+<h3><a href="/your_server/two">Increment by two</a></h3>
+
 </body>
 </html>
